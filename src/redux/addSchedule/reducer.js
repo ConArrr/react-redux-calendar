@@ -16,11 +16,6 @@ const init = {
 
 const addScheduleReducer = (state = init, action) => {
   const { type, payload } = action
-  console.log('state : ')
-  console.log(state)
-  console.log('action : ')
-  console.log(action)
-
 
   switch (type) {
     case ADD_SCHEDULE_SET_VALUE:
