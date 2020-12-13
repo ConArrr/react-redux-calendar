@@ -1,18 +1,18 @@
 import './style.css'
 
 import dayjs from 'dayjs'
-import { isFirstDay, isSameDay, isSameMonth } from '../../services/calendar'
+import { isFirstDay, isSameDay, isSameMonth, getMonth } from '../../services/calendar'
 
 import { Typography } from '@material-ui/core'
 
-const CalendarElement = ({ day }) => {
-  const today = dayjs()
-
-  const isCurrentMonth = isSameMonth(day, today)
+const CalendarElement = ({ day, month }) => {
+  const currentMonth = getMonth(month)
+  const isCurrentMonth = isSameMonth(day, currentMonth)
   const textColor = isCurrentMonth ? "textPrimary" : "textSecondary"
 
   const format = isFirstDay(day) ? "M月D日" : "D"
 
+  const today = dayjs()
   const isToday = isSameDay(day, today)
 
   return (
