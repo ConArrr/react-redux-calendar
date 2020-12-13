@@ -7,7 +7,14 @@ import './style.css'
 
 const youbis = ["日", "月", "火", "水", "木", "金", "土"]
 
-const CalendarBoard = ({ calendar, month, openAddScheduleDialog }) => {
+const CalendarBoard = ({
+  calendar,
+  month,
+  openAddScheduleDialog,
+  schedules
+}) => {
+  console.log('CalendarBoard.schedules')
+  console.log(schedules)
   return (
     <div className="container">
       <GridList className="grid" cols={7} spacing={0} cellHeight="auto">

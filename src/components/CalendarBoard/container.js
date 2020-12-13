@@ -7,7 +7,8 @@ import {
 } from '../../redux/addSchedule/actions'
 
 const mapStateToProps = (state) => ({
-  calendar: state.calendar
+  calendar: state.calendar,
+  schedules: state.schedules
 })
 
 const mapDispatchToProps = (dispatch) => ({
