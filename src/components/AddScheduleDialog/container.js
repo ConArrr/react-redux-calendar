@@ -25,9 +25,6 @@ const mergeProps = (stateProps, dispatchProps) => ({
   ...stateProps,
   ...dispatchProps,
   saveSchedule: () => {
-    console.log('stateProps')
-    console.log(stateProps)
-
     const {
       schedule: { form: schedule }
     } = stateProps
