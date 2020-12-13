@@ -7,7 +7,7 @@ import './style.css'
 
 const youbis = ["日", "月", "火", "水", "木", "金", "土"]
 
-const CalendarBoard = ({ calendar, month }) => {
+const CalendarBoard = ({ calendar, month, openAddScheduleDialog }) => {
   return (
     <div className="container">
       <GridList className="grid" cols={7} spacing={0} cellHeight="auto">
@@ -28,7 +28,7 @@ const CalendarBoard = ({ calendar, month }) => {
         }
         {
           calendar.map((day) => (
-            <li key={day.toISOString()}>
+            <li key={day.toISOString()} onClick={() => openAddScheduleDialog()}>
               <CalendarElement day={day} month={month} />
             </li>
           ))
