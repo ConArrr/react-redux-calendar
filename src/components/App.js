@@ -5,6 +5,7 @@ import { createStore } from 'redux'
 import Navigation from './Navigation/container'
 import CalendarBoard from './CalendarBoard/container'
 import AddScheduleDialog from './AddScheduleDialog/container'
+import CurrentScheduleDialog from './CurrentScheduleDialog/container'
 
 import DayjsUtils from '@date-io/dayjs'
 import { MuiPickersUtilsProvider } from '@material-ui/pickers'
@@ -22,6 +23,7 @@ const App = () => (
       <Navigation />
       <CalendarBoard />
       <AddScheduleDialog />
+      <CurrentScheduleDialog />
     </MuiPickersUtilsProvider>
   </Provider>
 )

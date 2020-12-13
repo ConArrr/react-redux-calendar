@@ -10,7 +10,8 @@ const youbis = ["日", "月", "火", "水", "木", "金", "土"]
 const CalendarBoard = ({
   calendar,
   month,
-  openAddScheduleDialog
+  openAddScheduleDialog,
+  openCurrentScheduleDialog
 }) => {
   return (
     <div className="container">
@@ -33,7 +34,12 @@ const CalendarBoard = ({
         {
           calendar.map(({ date, schedules }) => (
             <li key={date.toISOString()} onClick={() => openAddScheduleDialog(date)}>
-              <CalendarElement day={date} month={month} schedules={schedules} />
+              <CalendarElement
+                day={date}
+                month={month}
+                schedules={schedules}
+                onClickSchedule={openCurrentScheduleDialog}
+              />
             </li>
           ))
         }
